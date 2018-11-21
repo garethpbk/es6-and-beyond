@@ -1,0 +1,15 @@
+function dogBark(bark) {  
+  	const dogNoise = 'Dog barks ' + bark;
+    return dogNoise;
+}
+
+{
+  function dogBark(woof) {   
+    const dogNoise = 'Dog woofs ' + woof;
+    return dogNoise;
+  }
+  
+  dogBark('woof'); // 'Dog woofs woof'
+}
+
+dogBark('bark'); // 'Dog barks bark'

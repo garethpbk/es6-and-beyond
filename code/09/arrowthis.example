@@ -1,0 +1,34 @@
+let dog = {
+	logBark: function() {
+  	console.log('bark!');
+  },
+
+	doFunc: function() {
+  	var self = this;
+  	document.getElementById('btn').addEventListener('click', function() {
+    	console.log(self === dog); // true 
+    	console.log(this === dog); // false
+        console.log(this); // button element
+        this.logBark(); // TypeError; kicks us out of the function
+    	self.logBark(); // bark!
+    });
+  },
+  
+  doArrow: function() {
+  	document.getElementById('btn').addEventListener('click', () => {
+    	console.log(this === dog); // true
+        console.log(this); // dog object
+    	this.logBark(); // bark!
+        this.doNested(); // TypeError; doNested()'s this is window
+    });
+  },
+  
+  doNested: () => { // arrow functions do not work as methods
+  	console.log(this); // points to the window object, not dog object
+  	this.logBark(); // TypeError; window has no logBark() method
+  }
+}
+
+dog.doFunc();
+dog.doArrow();
+dog.doNested();

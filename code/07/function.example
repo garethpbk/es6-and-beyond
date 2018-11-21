@@ -1,0 +1,14 @@
+'use strict';
+
+var arrowDog = function arrowDog(name) {
+  var goDog = name + ' runs after the arrow.';
+  return goDog;
+};
+
+function funcDog(name) {
+  var goDog = name + ' runs after the function.';
+  return goDog;
+}
+
+arrowDog('Spot'); // 'Spot runs after the arrow.'
+funcDog('Rascal'); // 'Rascal runs after the function.'

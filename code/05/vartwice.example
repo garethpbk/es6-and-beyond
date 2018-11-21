@@ -1,0 +1,8 @@
+var x = 5;
+var x = 10; // you can do this!
+
+let y = 15;
+let y = 20; // but not this!
+
+const z = 25;
+const z = 30; // and definitely not this!

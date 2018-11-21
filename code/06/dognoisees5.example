@@ -1,0 +1,17 @@
+'use strict';
+
+function dogBark(bark) {
+  var dogNoise = 'Dog barks ' + bark;
+  return dogNoise;
+}
+
+{
+  var _dogBark = function _dogBark(woof) {
+    var dogNoise = 'Dog woofs ' + woof;
+    return dogNoise;
+  };
+
+  _dogBark('woof'); // 'Dog woofs woof'
+}
+
+dogBark('bark'); // 'Dog barks bark'

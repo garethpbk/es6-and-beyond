@@ -1,0 +1,12 @@
+const doublerArrow = x => x * 2;
+
+function doublerFunction(x) {
+  return x * 2;
+}
+
+doublerArrow(4); // 8
+doublerFunction(8); // 16
+
+const arrowObj = (person, years) => ({ name: person, age: years });
+
+arrowObj("Sarah", 25); // {name: "Sarah", age: 25}

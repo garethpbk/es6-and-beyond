@@ -1,0 +1,13 @@
+'use strict';
+
+var x = 15;
+var y = 10;
+
+{
+  var _x = 25;
+  var _y = 20;
+
+  console.log(_x + _y); // 45
+}
+
+console.log(x + y); // 25

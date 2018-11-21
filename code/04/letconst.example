@@ -1,0 +1,11 @@
+const x = 15;
+let y = 10;
+
+{
+  const x = 25;
+  const y = 20;
+
+  console.log(x + y); // 45
+}
+
+console.log(x + y); // 25
