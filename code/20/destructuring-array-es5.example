@@ -1,0 +1,69 @@
+'use strict';
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+// basic array destructuring
+var doubleSumFirstTwo = function doubleSumFirstTwo(arr) {
+  var _arr = _slicedToArray(arr, 2),
+      a = _arr[0],
+      b = _arr[1];
+
+  return a * 2 + b * 2;
+};
+// only first two values are relevant - rest get ignored
+doubleSumFirstTwo([1, 2, 3, 4, 5]); // 1 * 2 + 2 * 2 = 6
+
+// set a default value
+var a = void 0,
+    b = void 0;
+var _ref = [15];
+var _ref$ = _ref[0];
+a = _ref$ === undefined ? 10 : _ref$;
+var _ref$2 = _ref[1];
+b = _ref$2 === undefined ? 20 : _ref$2;
+
+console.log(a); // 15
+console.log(b); // 20
+
+// swap variable values
+var x = 'dog';
+var y = 'corn';
+console.log(x, y); // dog corn
+var _ref2 = [y, x];
+x = _ref2[0];
+y = _ref2[1];
+
+console.log(x, y); // corn dog
+
+// ignore unwanted values
+var fruits = ['apple', 'grape', 'banana'];
+var fruitOne = fruits[0],
+    fruitThree = fruits[2];
+
+console.log(fruitOne); // apple
+console.log(fruitThree); // banana
+
+// an array returned from a function
+function returnArr() {
+  return ['carrots', 'peas', 'potatoes'];
+}
+
+var _returnArr = returnArr();
+
+var _returnArr2 = _slicedToArray(_returnArr, 3);
+
+vegOne = _returnArr2[0];
+vegTwo = _returnArr2[1];
+vegThree = _returnArr2[2];
+
+console.log(vegOne, vegTwo, vegThree); // carrots peas potatoes
+
+// using the rest operator
+var lotsOfNumbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
+var fibOne = lotsOfNumbers[0],
+    fibTwo = lotsOfNumbers[1],
+    fibThree = lotsOfNumbers[2],
+    fibRest = lotsOfNumbers.slice(3);
+
+console.log(fibThree); // 2
+console.log(fibRest); // [3, 5, 8, 13, 21, 34, 55, 89, 144]

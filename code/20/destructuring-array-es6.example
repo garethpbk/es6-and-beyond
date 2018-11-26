@@ -1,0 +1,39 @@
+// basic array destructuring
+const doubleSumFirstTwo = arr => {
+  const [a, b] = arr; 
+  return a * 2 + b * 2;
+}
+// only first two values are relevant - rest get ignored
+doubleSumFirstTwo([1, 2, 3, 4, 5]); // 1 * 2 + 2 * 2 = 6
+
+// set a default value
+let a, b;
+[a = 10, b = 20] = [15];
+console.log(a); // 15
+console.log(b); // 20
+
+// swap variable values
+let x = 'dog';
+let y = 'corn';
+console.log(x, y); // dog corn
+[x, y] = [y, x];
+console.log(x, y); // corn dog
+
+// ignore unwanted values
+const fruits = ['apple', 'grape', 'banana'];
+const [fruitOne, , fruitThree] = fruits;
+console.log(fruitOne); // apple
+console.log(fruitThree); // banana
+
+// an array returned from a function
+function returnArr() {
+ return ['carrots', 'peas', 'potatoes']; 
+}
+[vegOne, vegTwo, vegThree] = returnArr();
+console.log(vegOne, vegTwo, vegThree); // carrots peas potatoes
+
+// using the rest operator
+const lotsOfNumbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
+const [fibOne, fibTwo, fibThree, ...fibRest] = lotsOfNumbers;
+console.log(fibThree); // 2
+console.log(fibRest); // [3, 5, 8, 13, 21, 34, 55, 89, 144]

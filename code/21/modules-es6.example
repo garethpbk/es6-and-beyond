@@ -1,0 +1,24 @@
+// default export in adder.js
+export default function adder(x, y) {
+  return x + y;
+}
+
+// import a default
+import adder from './adder';
+
+// non-default exports in config/variables.js
+export const x = 15;
+export const y = 20;
+
+// import non-defaults
+import { x, y } from '../config/variables';
+
+// alternative for default export
+const z = 25;
+export default z;
+
+// alternative for multiple exports
+const a = 30;
+const b = 35;
+export { a, b };
+
