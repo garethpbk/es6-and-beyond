@@ -1,0 +1,28 @@
+// basic destructuring
+const dog = { name: 'Spot', toys: ['squeaky', 'bone'] };
+const { name, toys } = dog;
+console.log(name); // Spot
+console.log(toys[0]); // squeaky
+
+// assign new variable names
+const cat = { name: 'Socks', toys: ['box', 'laser'] };
+const { name: nombre, toys: distractions } = cat;
+console.log(nombre); // Socks
+console.log(distractions[1]); // laser
+
+// set default values
+const fish = { name: 'Bubbles' };
+const { name = 'Goldy', home = 'aquarium' } = fish;
+console.log(name); // Bubbles
+console.log(home); // aquarium
+
+// nested destructuring
+const bird = { name: 'Feathers', stats: { status: 'endangered' }};
+const { name, stats: { status }} = bird;
+console.log(status); // endangered
+
+// destructuring without declaration - wrapped in ( )
+let name, age;
+({ name, age } = { name: 'Sparky', age: 10 });
+console.log(name) // Sparky
+console.log(age) // 10

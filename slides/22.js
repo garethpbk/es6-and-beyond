@@ -3,10 +3,9 @@ import { ModSlide, Header, CodeMod, WhiteCodePane, CodePaneWrapper } from './Bas
 
 export default () => (
   <ModSlide bgColor="primary" padding="0px" overflow>
-    <Header>computed property names</Header>
+    <Header>classes: inheritence and extending</Header>
     <ul>
-      <li>easy way to use a variable in an object propery name</li>
-      <li>allows for initialization and variable property assignment of object literal in one step</li>
+      <li>wip</li>
     </ul>
     <CodePaneWrapper column>
       <WhiteCodePane

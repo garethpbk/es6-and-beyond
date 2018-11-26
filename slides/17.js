@@ -3,21 +3,23 @@ import { ModSlide, Header, CodeMod, WhiteCodePane, CodePaneWrapper } from './Bas
 
 export default () => (
   <ModSlide bgColor="primary" padding="0px" overflow>
-    <Header>computed property names</Header>
+    <Header>method definition shorthand</Header>
     <ul>
-      <li>easy way to use a variable in an object propery name</li>
-      <li>allows for initialization and variable property assignment of object literal in one step</li>
+      <li>
+        declare object methods without the <CodeMod>function</CodeMod> keyword or colon
+      </li>
+      <li>similar/related to how class methods are declared</li>
     </ul>
     <CodePaneWrapper column>
       <WhiteCodePane
         lang="javascript"
-        source={require('raw-loader!../code/16/computed-es6.example')}
+        source={require('raw-loader!../code/17/definitions-es6.example')}
         fontSize="18px"
         spanPadding="5%"
       />
       <WhiteCodePane
         lang="javascript"
-        source={require('raw-loader!../code/16/computed-es5.example')}
+        source={require('raw-loader!../code/17/definitions-es5.example')}
         fontSize="18px"
         spanPadding="5%"
       />

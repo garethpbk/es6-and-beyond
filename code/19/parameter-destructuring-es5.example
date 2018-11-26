@@ -1,0 +1,43 @@
+'use strict';
+
+// function using destructuring on the user object
+function addUser(user) {
+  var name = user.name,
+      age = user.age,
+      id = user.id;
+
+  var isValid = false;
+
+  if (age >= 18) isValid = true;
+
+  return { username: name, isValid: isValid, id: id };
+};
+
+// destructure the user object in the parameters
+var addNewUser = function addNewUser(_ref) {
+  var name = _ref.name,
+      age = _ref.age,
+      id = _ref.id;
+
+  var isValid = false;
+
+  if (age >= 18) isValid = true;
+
+  return { username: name, isValid: isValid, id: id };
+};
+
+var sam = {
+  name: 'Sam',
+  age: 18,
+  id: 485
+};
+
+addUser(sam); // { username: "Sam", isValid: true, id: 485 }
+
+var terry = {
+  name: 'Terry',
+  age: 15,
+  id: 486
+};
+
+addNewUser(terry); // { username: "Terry", isValid: false, id: 486 };

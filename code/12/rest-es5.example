@@ -1,0 +1,25 @@
+"use strict";
+
+function sum(x, y) {
+    for (var _len = arguments.length, z = Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+        z[_key - 2] = arguments[_key];
+    }
+
+    return x + y + z;
+    // return (x + y + z.reduce((acc, cur) => acc + cur));
+}
+
+sum(1, 2, 3, 4); // "33,4" - z is an array; use reduce to sum array and get 10
+
+function words(first, second) {
+    for (var _len2 = arguments.length, others = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+        others[_key2 - 2] = arguments[_key2];
+    }
+
+    var num = arguments.length;
+    return "My " + num + " favorite words are: " + first + "," + second + "," + others;
+}2;
+
+words("tree", "rock", "dirt", "water", "hole");
+// My 5 favorite words are: tree,rock,dirt,water,hole
+// console.log(others) would show ["dirt", "water", "hole"]

@@ -1,0 +1,24 @@
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+// pass array in as arguments
+const nums = [2, 4, 6];
+
+sum(...nums); // 12
+
+// spread in an array
+const trees = ["pine", "oak", "fir"];
+const plants = ["fern", "moss", ...trees, "ivy"];
+
+console.log(plants); // ["fern", "moss", "pine", "oak", "fir", "ivy"]
+
+// merge objects
+const mergePerson = (name, stats) => {
+ return {...name, ...stats}; 
+}
+
+const jimName = { first: "Jim", middle: "Bob", last: "Jackson" };
+const jimStats = { age: 25, height: "180cm", weight: "12 stone" };
+
+mergePerson(jimName, jimStats); // { first: "Jim", middle: "Bob", last: "Jackson", age: 25, height: "180cm", weight: "12 stone" };

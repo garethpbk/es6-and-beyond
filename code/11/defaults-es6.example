@@ -1,0 +1,13 @@
+function myPet(species = "dog", age = 5, name = getName(), color, params = [species, age, name, color]) {
+ return "My " + color + " pet " + name + " is a " + species + " and is " + age + " years old. " + "(" + params + ")";
+}
+
+function getName(name = "Spot") {
+  return name;
+}
+
+myPet(); // My undefined pet Spot is a dog and is 5 years old. (dog,5,Spot,)
+
+myPet("lizard", 15, "Lizzy", "green"); // My green pet Lizzy is a lizard and is 15 years old. (lizard,15,Lizzy,green)
+
+myPet("sloth", "Frank", "brown"); // My undefined pet brown is a sloth who is Frank years old. (sloth,Frank,brown,)

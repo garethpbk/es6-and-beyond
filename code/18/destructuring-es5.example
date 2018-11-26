@@ -1,0 +1,44 @@
+'use strict';
+
+// basic destructuring
+var dog = { name: 'Spot', toys: ['squeaky', 'bone'] };
+var name = dog.name,
+    toys = dog.toys;
+
+console.log(name); // Spot
+console.log(toys[0]); // squeaky
+
+// assign new variable names
+var cat = { name: 'Socks', toys: ['box', 'laser'] };
+var nombre = cat.name,
+    distractions = cat.toys;
+
+console.log(nombre); // Socks
+console.log(distractions[1]); // laser
+
+// set default values
+var fish = { name: 'Bubbles' };
+var _fish$name = fish.name,
+    name = _fish$name === undefined ? 'Goldy' : _fish$name,
+    _fish$home = fish.home,
+    home = _fish$home === undefined ? 'aquarium' : _fish$home;
+
+console.log(name); // Bubbles
+console.log(home); // aquarium
+
+// nested destructuring
+var bird = { name: 'Feathers', stats: { status: 'endangered' } };
+var name = bird.name,
+    status = bird.stats.status;
+
+console.log(status); // endangered
+
+// destructuring without declaration - wrapped in ( )
+var name = void 0,
+    age = void 0;
+var _name$age = { name: 'Sparky', age: 10 };
+name = _name$age.name;
+age = _name$age.age;
+
+console.log(name); // Sparky
+console.log(age); // 10

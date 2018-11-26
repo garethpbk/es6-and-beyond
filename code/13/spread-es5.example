@@ -1,0 +1,28 @@
+"use strict";
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+// pass array in as arguments
+var nums = [2, 4, 6];
+
+sum.apply(undefined, nums); // 12
+
+// spread in an array
+var trees = ["pine", "oak", "fir"];
+var plants = ["fern", "moss"].concat(trees, ["ivy"]);
+
+console.log(plants); // ["fern", "moss", "pine", "oak", "fir", "ivy"]
+
+// merge objects
+var mergePerson = function mergePerson(name, stats) {
+  return _extends({}, name, stats);
+};
+
+var jimName = { first: "Jim", middle: "Bob", last: "Jackson" };
+var jimStats = { age: 25, height: "180cm", weight: "12 stone" };
+
+mergePerson(jimName, jimStats); // { first: "Jim", middle: "Bob", last: "Jackson", age: 25, height: "180cm", weight: "12 stone" };

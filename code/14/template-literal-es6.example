@@ -1,0 +1,5 @@
+function makeNoise(animal, noises, times) {
+ 	 return `The ${animal} says ${noises[Math.floor(Math.random(0, noises.length) * noises.length)]} ${times} times.`
+}
+
+makeNoise("dog", ["bark", "woof", "yip", "grrrr"], 3); // The dog says bar/woof/yip/grrrr 3 times.

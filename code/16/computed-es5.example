@@ -1,0 +1,22 @@
+'use strict';
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function makeFood(name, meal, type) {
+  return _defineProperty({
+    name: name
+  }, meal, type);
+};
+
+makeFood('hashbrowns', 'breakfast', 'starch'); // { name: 'hashbrowns', breakfast: 'starch' }
+makeFood('red velvet cake', 'dessert', 'cake'); // { name: 'red velvet cake', dessert: 'cake' }
+
+// same as doing this
+function addFood(name, meal, type) {
+  var food = { name: name };
+  food[meal] = type;
+
+  return food;
+}
+
+addFood('ham sandwich', 'lunch', 'sandwich'); // { name: 'ham sandwich', lunch: 'sandwich' }

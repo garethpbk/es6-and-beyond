@@ -1,18 +1,36 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Slide, Text, CodePane } from 'spectacle';
-import { ModSlide, Header, WhiteCodePane } from './Base';
+import { ModSlide, Header, CodeMod, WhiteCodePane, CodePaneWrapper } from './Base';
 
 export default () => (
-  <ModSlide bgColor="primary">
-    <Header textColor="secondary" margin="25px 0">
-      Send a Mutation, 2/2
-    </Header>
-    <WhiteCodePane
-      lang="javascript"
-      source={require('raw-loader!../code/react-graphql-send-mutation-2.example')}
-      fontSize="24px"
-      spanPadding="2.5% 10%"
-    />
+  <ModSlide bgColor="primary" padding="0px" overflow>
+    <Header>spread syntax</Header>
+    <ul>
+      <li>
+        expand an iterable (array, string, object) where zero or more arguments or key-value pairs are expected using
+        the <CodeMod>...</CodeMod> operator
+      </li>
+      <li>many uses: pass array as arguments, copy an array or object, concatenate arrays (and other array methods)</li>
+      <li>when used on a string, returns an array of string's characters</li>
+      <li>only copies oobjects one level of nesting deep</li>
+      <li>
+        <em>
+          <strong>spread</strong> all values an iterable into a function or method
+        </em>
+      </li>
+    </ul>
+    <CodePaneWrapper column>
+      <WhiteCodePane
+        lang="javascript"
+        source={require('raw-loader!../code/13/spread-es6.example')}
+        fontSize="18px"
+        spanPadding="5%"
+      />
+      <WhiteCodePane
+        lang="javascript"
+        source={require('raw-loader!../code/13/spread-es5.example')}
+        fontSize="18px"
+        spanPadding="5%"
+      />
+    </CodePaneWrapper>
   </ModSlide>
 );

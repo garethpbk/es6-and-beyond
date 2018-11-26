@@ -8,8 +8,8 @@ let dog = {
   	document.getElementById('btn').addEventListener('click', function() {
     	console.log(self === dog); // true 
     	console.log(this === dog); // false
-        console.log(this); // button element
-        this.logBark(); // TypeError; kicks us out of the function
+    	console.log(this); // button element
+    	this.logBark(); // TypeError; kicks us out of the function
     	self.logBark(); // bark!
     });
   },
@@ -17,9 +17,9 @@ let dog = {
   doArrow: function() {
   	document.getElementById('btn').addEventListener('click', () => {
     	console.log(this === dog); // true
-        console.log(this); // dog object
+    	console.log(this); // dog object
     	this.logBark(); // bark!
-        this.doNested(); // TypeError; doNested()'s this is window
+    	this.doNested(); // TypeError; doNested()'s this is window
     });
   },
   

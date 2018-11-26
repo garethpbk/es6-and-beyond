@@ -1,16 +1,33 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Slide, Text, CodePane } from 'spectacle';
-import { ModSlide, Header, WhiteCodePane } from './Base';
+import { ModSlide, Header, CodeMod, WhiteCodePane, CodePaneWrapper } from './Base';
 
 export default () => (
-  <ModSlide bgColor="primary" margin="25px 0">
-    <Header textColor="secondary">Send a Mutation, 1/2</Header>
-    <WhiteCodePane
-      lang="javascript"
-      source={require('raw-loader!../code/react-graphql-send-mutation.example')}
-      fontSize="18px"
-      spanPadding="2.5% 12%"
-    />
+  <ModSlide bgColor="primary" padding="0px" overflow>
+    <Header>rest parameters</Header>
+    <ul>
+      <li>
+        pass in a variable numbers of arguments as the last parameter using the <CodeMod>...</CodeMod> operator
+      </li>
+      <li>arguments are passed in as an array - array methods available</li>
+      <li>
+        <em>
+          pass the <strong>rest</strong> of the arguments into the function
+        </em>
+      </li>
+    </ul>
+    <CodePaneWrapper column>
+      <WhiteCodePane
+        lang="javascript"
+        source={require('raw-loader!../code/12/rest-parameters.example')}
+        fontSize="18px"
+        spanPadding="5%"
+      />
+      <WhiteCodePane
+        lang="javascript"
+        source={require('raw-loader!../code/12/rest-es5.example')}
+        fontSize="18px"
+        spanPadding="5%"
+      />
+    </CodePaneWrapper>
   </ModSlide>
 );

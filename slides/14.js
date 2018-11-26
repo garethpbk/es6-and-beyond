@@ -1,38 +1,43 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Slide, Text, CodePane } from 'spectacle';
-import { ModSlide, Header, WhiteCodePane } from './Base';
-
-import vueLogo from '../assets/img/vue-logo.svg';
-
-const Logo = styled.img`
-  width: 125px;
-
-  margin: 0 50px;
-
-  transition: all 1.5s;
-
-  &:hover {
-    transform: rotate3d(2, -1, -1, 360deg);
-  }
-`;
+import { ModSlide, Header, CodeMod, WhiteCodePane, CodePaneWrapper } from './Base';
 
 export default () => (
-  <ModSlide bgColor="primary">
-    <Header textColor="secondary" margin="25px 0">
-      Vivacious Viands <Logo src={vueLogo} alt="Vue Logo" />
-    </Header>
-    <Text margin="50px 0" textColor="secondary" size={2}>
-      <a href="http://vivacious.gareth.cool/" target="_blank" rel="noreferrer noopener">
-        https://vivacious.gareth.cool/
-      </a>
-    </Text>
-    <Text bold>vue-apollo</Text>
-    <WhiteCodePane
-      lang="javascript"
-      source={require('raw-loader!../code/vue-graphql.example')}
-      fontSize="24px"
-      spanPadding="2.5% 20%"
-    />
+  <ModSlide bgColor="primary" padding="0px">
+    <Header>template literals</Header>
+    <ul>
+      <li>string literals that allow js expressione to be embedded within</li>
+      <li>
+        enclosed in backticks <CodeMod>``</CodeMod> with expressions in placeholders <CodeMod>$&#123;&#125;</CodeMod>
+      </li>
+      <li>
+        essentially a better way to concatenate string parts with evaluated expressions without using{' '}
+        <CodeMod>+</CodeMod>, including multi-line strings
+      </li>
+      <li>formerly called 'template strings' so you may see that, same thing</li>
+      <li>
+        advanced form called <strong>tagged literals</strong> that can parse template literals with a function (e.g.
+        styled-components, graphql-tag)
+      </li>
+      <li>
+        new <CodeMod>str.raw</CodeMod> property and <CodeMod>String.raw()</CodeMod> method
+      </li>
+      <li>
+        syntax is <CodeMod>functionName``</CodeMod> - check out Wes Bos's explanation
+      </li>
+    </ul>
+    <CodePaneWrapper>
+      <WhiteCodePane
+        lang="javascript"
+        source={require('raw-loader!../code/14/template-literal-es6.example')}
+        fontSize="18px"
+        spanPadding="5%"
+      />
+      <WhiteCodePane
+        lang="javascript"
+        source={require('raw-loader!../code/14/template-literal-es5.example')}
+        fontSize="18px"
+        spanPadding="5%"
+      />
+    </CodePaneWrapper>
   </ModSlide>
 );

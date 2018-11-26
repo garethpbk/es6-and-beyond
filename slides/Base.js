@@ -45,6 +45,7 @@ export const CodeMod = styled(Code)`
 
 export const CodePaneWrapper = styled.div`
   display: flex;
+  flex-direction: ${props => (props.column ? 'column' : 'row')};
 `;
 
 export const WhiteCodePane = styled(CodePane)`
@@ -54,9 +55,9 @@ export const WhiteCodePane = styled(CodePane)`
   font-size: ${props => props.fontSize} !important;
 
   min-width: auto !important;
-  max-width: auto !important;
+  max-width: 1200px !important;
 
-  margin: 0 5px !important;
+  margin: 5px !important;
 
   pre {
     padding: ${props => props.spanPadding} !important;

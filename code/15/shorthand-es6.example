@@ -1,0 +1,12 @@
+const name = "Fido";
+const noise = "Woof";
+const age = 5;
+
+const dog = {
+  type: "Dog",
+  name,
+  noise,
+  age
+}
+
+console.log(dog.type, dog.name, dog.noise, dog.age); // Dog Fido Woof 5

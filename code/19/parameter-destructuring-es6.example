@@ -1,0 +1,34 @@
+// function using destructuring on the user object
+function addUser(user) {
+  const { name, age, id } = user;
+  let isValid = false;
+  
+  if (age >= 18) isValid = true;
+  
+  return { username: name, isValid, id };
+};
+
+// destructure the user object in the parameters
+const addNewUser = ({ name, age, id }) => {
+  let isValid = false;
+  
+  if (age >= 18) isValid = true;
+  
+  return { username: name, isValid, id };
+}
+
+const sam = {
+  name: 'Sam',
+  age: 18,
+  id: 485,
+};
+
+addUser(sam); // { username: "Sam", isValid: true, id: 485 }
+
+const terry = {
+  name: 'Terry',
+  age: 15,
+  id: 486
+};
+
+addNewUser(terry); // { username: "Terry", isValid: false, id: 486 };

@@ -1,0 +1,14 @@
+"use strict";
+
+var name = "Fido";
+var noise = "Woof";
+var age = 5;
+
+var dog = {
+  type: "Dog",
+  name: name,
+  noise: noise,
+  age: age
+};
+
+console.log(dog.type, dog.name, dog.noise, dog.age); // Dog Fido Woof 5

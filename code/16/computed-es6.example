@@ -1,0 +1,19 @@
+function makeFood(name, meal, type) {
+  return {
+    name,
+  	[meal]: type
+  }
+};
+
+makeFood('hashbrowns', 'breakfast', 'starch'); // { name: 'hashbrowns', breakfast: 'starch' }
+makeFood('red velvet cake', 'dessert', 'cake'); // { name: 'red velvet cake', dessert: 'cake' }
+
+// same as doing this
+function addFood(name, meal, type) {
+  const food = { name };
+  food[meal] = type;
+  
+  return food;
+}
+
+addFood('ham sandwich', 'lunch', 'sandwich'); // { name: 'ham sandwich', lunch: 'sandwich' }

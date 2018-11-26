@@ -1,0 +1,15 @@
+function sum(x, y, ...z) {
+    return x + y + z;
+    // return (x + y + z.reduce((acc, cur) => acc + cur));
+}
+
+sum(1, 2, 3, 4); // "33,4" - z is an array; use reduce to sum array and get 10
+
+function words(first, second, ...others) {
+    const num = arguments.length;
+    return "My " + num + " favorite words are: " + first + "," + second + "," + others; 
+}2
+
+words("tree", "rock", "dirt", "water", "hole");
+// My 5 favorite words are: tree,rock,dirt,water,hole
+// console.log(others) would show ["dirt", "water", "hole"]

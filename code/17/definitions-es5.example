@@ -1,0 +1,16 @@
+'use strict';
+
+var theDog = {
+  // no shorthand/pre-es6
+  fetchThing: function fetchThing(thing, times) {
+    return 'The dog fetches the ' + thing + ' ' + times + ' times.';
+  },
+
+  // using shorthand
+  makeNoise: function makeNoise(noise, volume) {
+    return 'The dog goes ' + noise + ' very ' + volume + 'ly.';
+  }
+};
+
+theDog.fetchThing('ball', 5); // The dog fetches the ball 5 times.
+theDog.makeNoise('woof', 'loud'); // The dog goes woof very loudly.
