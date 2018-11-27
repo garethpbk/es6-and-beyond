@@ -1,0 +1,44 @@
+// class declaration
+class Animal {
+  constructor(name, noise, skill) {
+    this.name = name;
+    this.noise = noise;
+    this.skill = skill;
+  }
+  
+  useSkill() {
+  	console.log(`${this.name} uses ${this.skill}.`); 
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, noise, skill) {
+  	super(name, noise, skill);
+  }
+  
+  bark() {
+  	console.log(`${this.name} goes ${this.noise}`);
+  }
+}
+
+const fido = new Dog('Fido', 'woof', 'jump');
+// in the extended class
+fido.bark(); // Fido goes woof
+// inherited from base class
+fido.useSkill(); // Fido uses jump
+
+// class expression - unnamed
+let Plant = class {
+  constructor(name, color) {
+  	this.name = name;
+    this.color = color;
+  }
+}
+
+// class expression - named
+let Fungus = class Shroom {
+  constructor(name, color) {
+  	this.name = name;
+    this.color = color;
+  }
+}

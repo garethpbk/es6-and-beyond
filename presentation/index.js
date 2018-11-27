@@ -33,6 +33,11 @@ import SlideTwentyTwo from '../slides/22';
 import SlideTwentyThree from '../slides/23';
 import SlideTwentyFour from '../slides/24';
 import SlideTwentyFive from '../slides/25';
+import SlideTwentySix from '../slides/26';
+import SlideTwentySeven from '../slides/27';
+import SlideTwentyEight from '../slides/28';
+import SlideTwentyNine from '../slides/29';
+import SlideThirty from '../slides/30';
 
 // Require CSS
 require('normalize.css');
@@ -79,6 +84,11 @@ export default class Presentation extends React.Component {
         <SlideTwentyThree />
         <SlideTwentyFour />
         <SlideTwentyFive />
+        <SlideTwentySix />
+        <SlideTwentySeven />
+        <SlideTwentyEight />
+        <SlideTwentyNine />
+        <SlideThirty />
       </Deck>
     );
   }

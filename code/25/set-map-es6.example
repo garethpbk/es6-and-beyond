@@ -1,0 +1,6 @@
+const uniqueAnimals = new Set(["dog", "cat", "horse", "frog", "dog", "kangaroo"]);
+// duplicate "dog" value is removed
+console.log(uniqueAnimals); // ["dog", "cat", "horse", "frog", "kangaroo"]
+
+const animalSounds = new Map([["dog", "bark"], ["cat", "meow"], ["horse", "neigh"]] );
+console.log(animalSounds); // ["dog" => "bark", "cat" => "meow", "horse" => "neigh"]

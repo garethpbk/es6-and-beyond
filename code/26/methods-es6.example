@@ -1,0 +1,47 @@
+// Object.assign() method
+const dog = { name: "Spot", age: 5, color: "brown" };
+const spot = Object.assign({toys: ["ball", "bone"], noise: "woof" }, dog);
+console.log(spot); // { toys: ["ball", "bone"], noise: "woof", name: "Spot", age: 5, color: "brown" }
+
+// new Array methods
+const numbers = [3, 6, 12, 17, 21, 23];
+
+// .find()
+const notDivisible = numbers.find(num => {
+  return num % 3 !== 0;
+});
+console.log(notDivisible); // 17
+
+// .findIndex()
+const ndIndex = numbers.findIndex(function(num) {
+  return num % 3 !== 0;
+})
+console.log(ndIndex); // 3
+
+// new String methods
+const buffalo = "buffalo ";
+
+// .repeat()
+const sentence = `A valid sentence is: ${buffalo.repeat(7)}.`;
+console.log(sentence); // A valid sentence is: buffalo buffalo buffalo buffalo buffalo buffalo buffalo .
+
+// .search()
+const regex = /[^\w\s]/g; // any character that is not a letter, number, or whitespace
+console.log(sentence.search(regex)); // 19
+// not a new method, can use charAt to get the character
+console.log(sentence.charAt(sentence.search(regex))); // :
+
+// new Number methods
+
+// .isNaN()
+NaN == NaN; // the problem: this is false
+NaN === NaN; // also false
+Number.isNaN(NaN); // the solution - true
+Number.isNaN('dog'); // false, doesn't try to force type coercion
+
+// .isFinite()
+Number.isFinite(Infinity); // false
+Number.isFinite(0); // true
+Number.isFinite(100 / 0); // false (evaluates to Infinity)
+Number.isFinite(100 / 3); // true - imprecise floating points
+

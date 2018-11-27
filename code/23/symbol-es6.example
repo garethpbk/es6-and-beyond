@@ -1,0 +1,5 @@
+const symbolOne = Symbol("symbol");
+const symbolTwo = Symbol("symbol");
+
+// same function and same descriptor, but each is unique
+symbolOne === symbolTwo; // false

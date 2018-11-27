@@ -1,0 +1,17 @@
+// construct a new Promise that resolves 50% of the time, fails 50% of the time
+const myPromise = new Promise((resolve, reject) => {
+  if (Math.random() * 100 > 50) {
+  	resolve('Promise resolved!');
+  } else {
+    reject('Promise rejected :(');
+  }
+});
+
+// one way to handle a promise...
+const onResolved = resolvedValue => console.log(resolvedValue);
+const onRejected = rejectedValue => console.log(rejectedValue);
+myPromise.then(onResolved, onRejected);
+
+// a better way - use .then() to handle success and .catch() to handle failure
+myPromise.then(res => console.log(res)).catch(err => console.log(err));
+

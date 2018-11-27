@@ -62,7 +62,7 @@ export const WhiteCodePane = styled(CodePane)`
   pre {
     padding: ${props => props.spanPadding} !important;
     span {
-      color: cornflowerblue !important;
+      color: #56cbff !important;
     }
   }
 `;
