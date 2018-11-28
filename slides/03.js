@@ -22,7 +22,7 @@ const Svg = styled.img`
 export default () => (
   <ModSlide transition={['zoom']} bgColor="primary">
     <Header textColor="secondary" margin="25px 0">
-      transpiling and browser support
+      transpiling & browser support
     </Header>
     <ul>
       <li>Not all browsers support ES6/ES7/ESetc.</li>
@@ -42,6 +42,9 @@ export default () => (
       </li>
       <li>Other languages that compile to JS (TypeScript, CoffeeScript, Elm, Dart, ClojureScript, and many more)</li>
       <li>Will give examples of ES6+ vs ES5 code for several features (Babel repl)</li>
+      <li>
+        <strong>ES6 is 'vanilla' JavaScript</strong>; part of the ES specification
+      </li>
     </ul>
     <Logos>
       <Svg src={babelLogo} alt="Babel" />

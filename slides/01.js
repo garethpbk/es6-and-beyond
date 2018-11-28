@@ -32,7 +32,9 @@ const swoosh = keyframes`
 `;
 
 const Second = styled(Header)`
+  font-family: 'blade_runner_movie_fontRg';
   font-size: 100px !important;
+  text-transform: none;
 
   position: relative;
   left: -200%;
@@ -70,7 +72,8 @@ export default () => (
     <Second margin="25px 0">
       <em>and beyond</em>
     </Second>
-    <SmallText margin="100px 0" textColor="secondary">
+    <SmallText margin="100px 0 0 0">Gareth Kloeden</SmallText>
+    <SmallText margin="50px 0" textColor="secondary">
       November 28, 2018
     </SmallText>
   </Slide>
