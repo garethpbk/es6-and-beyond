@@ -3,27 +3,37 @@ import { ModSlide, Header, CodeMod, WhiteCodePane, CodePaneWrapper } from './Bas
 
 export default () => (
   <ModSlide bgColor="primary" padding="0px" overflow>
-    <Header>es6 modules</Header>
+    <Header>promises</Header>
     <ul>
-      <li>an easy way to include code from one JS file in another</li>
-      <li>previously, different module formats: CommonJS, AMD, UMD</li>
-      <li>ES6 brings a standardized, native module format</li>
+      <li>an object that represents the result of a deferred, possibly asynchronous operation</li>
+      <li>always in one of three states: pending, resolved, or rejected</li>
       <li>
-        <CodeMod>export</CodeMod> and <CodeMod>import</CodeMod> keywords
+        use the <CodeMod>Promise()</CodeMod> constructor to create a new Promise object
+      </li>
+      <li>takes in two arguments: resolve and reject</li>
+      <li>
+        <CodeMod>resolve</CodeMod> function runs on successful completion
       </li>
       <li>
-        import name of export with <CodeMod>&#123;&#125;</CodeMod>, unless default export
+        <CodeMod>reject</CodeMod> function runs on failure or if an error occurs
       </li>
-      <li>commonly seen in component-based architecture e.g. React</li>
       <li>
-        all exported items can be imported with a namespace:
-        <br />
-        <CodeMod>import * as namespace from './source.js'</CodeMod>
+        <CodeMod>.then()</CodeMod> method to access results of the promise
       </li>
+      <li>
+        <CodeMod>.then()</CodeMod> accepts two callbacks, first when resolved, second when rejected...
+      </li>
+      <li>
+        ...but a better way to handle it is with <CodeMod>.catch()</CodeMod> - separate resolve and reject methods
+      </li>
+      <li>
+        <CodeMod>.all()</CodeMod> and <CodeMod>.race()</CodeMod> methods
+      </li>
+      <li>a complex topic; this is a surface-level overview - research and practice!</li>
     </ul>
     <WhiteCodePane
       lang="javascript"
-      source={require('raw-loader!../code/21/modules-es6.example')}
+      source={require('raw-loader!../code/27/promises-es6.example')}
       fontSize="18px"
       spanPadding="5%"
     />

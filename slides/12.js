@@ -9,6 +9,7 @@ export default () => (
         pass in a variable numbers of arguments as the last parameter using the <CodeMod>...</CodeMod> operator
       </li>
       <li>arguments are passed in as an array - array methods available</li>
+      <li>array rest in ES6, object rest introduced in ES9/ES2018</li>
       <li>
         <em>
           pass the <strong>rest</strong> of the arguments into the function

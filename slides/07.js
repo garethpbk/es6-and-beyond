@@ -3,7 +3,7 @@ import { ModSlide, Header, CodeMod, WhiteCodePane, CodePaneWrapper } from './Bas
 
 export default () => (
   <ModSlide bgColor="primary" padding="0px">
-    <Header>arrow functions () =></Header>
+    <Header>arrow functions () => &#123;&#125;</Header>
     <ul>
       <li>a new way to write function expressions (always anonymous, no declarations)</li>
       <li>

@@ -1,0 +1,8 @@
+// Array.includes()
+const pets = ["dog", "cat", "parrot", "goldfish"];
+const hasCat = pets.includes("cat"); // true
+const hasWhale = pets.includes("whale"); // false
+const hasBigDog = pets.includes("Dog"); // false
+
+// exponentiation operator - like Math.pow(2, 10)
+const doExponent = 2 ** 10; // 1024

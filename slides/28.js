@@ -2,41 +2,33 @@ import React from 'react';
 import { ModSlide, Header, CodeMod, WhiteCodePane, CodePaneWrapper } from './Base';
 
 export default () => (
-  <ModSlide bgColor="primary" padding="0px" overflow>
-    <Header>generator functions</Header>
+  <ModSlide bgColor="primary" padding="0px">
+    <Header>set & map</Header>
     <ul>
-      <li>a function that can be "paused" to return something, then resumed</li>
       <li>
-        declared with * - <CodeMod>function* myGenerator(){}</CodeMod> or
-        <br />
-        <CodeMod>function *myGenerator(){}</CodeMod>
+        a <strong>Set</strong> is like an array, but with all unique values
       </li>
       <li>
-        <CodeMod>yield</CodeMod> keyword returns a value plus if the function is finished
+        <CodeMod>new Set([iterable])</CodeMod> function to create a set
       </li>
       <li>
-        <CodeMod>.next()</CodeMod> method resumes the function
+        the <strong>Map</strong> object holds key-value pairs and remembers the original insertion order of the keys
       </li>
       <li>
-        indicate final return value with normal <CodeMod>return</CodeMod>
+        <CodeMod>new Map([iterable])</CodeMod> function to create a map
       </li>
       <li>
-        <CodeMod>async/await</CodeMod> uses generators under the hood
+        unrelated to the <CodeMod>Array.map()</CodeMod> array method
+      </li>
+      <li>
+        also <CodeMod>WeakSet</CodeMod> and <CodeMod>WeakMap</CodeMod> objects, I dunno the difference (anyone?)
       </li>
     </ul>
-    <CodePaneWrapper column>
-      <WhiteCodePane
-        lang="javascript"
-        source={require('raw-loader!../code/24/generator-es6.example')}
-        fontSize="18px"
-        spanPadding="5%"
-      />
-      <WhiteCodePane
-        lang="javascript"
-        source={require('raw-loader!../code/24/generator-es5.example')}
-        fontSize="18px"
-        spanPadding="5%"
-      />
-    </CodePaneWrapper>
+    <WhiteCodePane
+      lang="javascript"
+      source={require('raw-loader!../code/25/set-map-es6.example')}
+      fontSize="18px"
+      spanPadding="5%"
+    />
   </ModSlide>
 );

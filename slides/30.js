@@ -2,41 +2,22 @@ import React from 'react';
 import { ModSlide, Header, CodeMod, WhiteCodePane, CodePaneWrapper } from './Base';
 
 export default () => (
-    <ModSlide bgColor="primary" padding="0px" overflow>
-        <Header>generator functions</Header>
-        <ul>
-            <li>a function that can be "paused" to return something, then resumed</li>
-            <li>
-                declared with * - <CodeMod>function* myGenerator(){}</CodeMod> or
-        <br />
-                <CodeMod>function *myGenerator(){}</CodeMod>
-            </li>
-            <li>
-                <CodeMod>yield</CodeMod> keyword returns a value plus if the function is finished
+  <ModSlide bgColor="primary" padding="0px">
+    <Header>ES8/ES2017</Header>
+    <ul>
+      <li>async/await, see slide 22</li>
+      <li>parallelism/shared memory (???)</li>
+      <li>
+        new object methods: <CodeMod>Object.entries()</CodeMod> - loop over object's keys and values,{' '}
+        <CodeMod>Object.values</CodeMod> - loop over object's values, <CodeMod>Object.getOwnPropertyDescriptor</CodeMod>{' '}
+        - returns descriptor for property directly on object (not in prototype chain)
       </li>
-            <li>
-                <CodeMod>.next()</CodeMod> method resumes the function
+      <li>
+        string padding: <CodeMod>String.padStart()</CodeMod> and <CodeMod>String.padEnd()</CodeMod> - two arguments:
+        (length, character) - add designated character to pad a string out to designated length (remember{' '}
+        <CodeMod>left-pad</CodeMod>?)
       </li>
-            <li>
-                indicate final return value with normal <CodeMod>return</CodeMod>
-            </li>
-            <li>
-                <CodeMod>async/await</CodeMod> uses generators under the hood
-      </li>
-        </ul>
-        <CodePaneWrapper column>
-            <WhiteCodePane
-                lang="javascript"
-                source={require('raw-loader!../code/24/generator-es6.example')}
-                fontSize="18px"
-                spanPadding="5%"
-            />
-            <WhiteCodePane
-                lang="javascript"
-                source={require('raw-loader!../code/24/generator-es5.example')}
-                fontSize="18px"
-                spanPadding="5%"
-            />
-        </CodePaneWrapper>
-    </ModSlide>
+      <li>trailing commas in function params</li>
+    </ul>
+  </ModSlide>
 );

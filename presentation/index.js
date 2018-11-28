@@ -38,6 +38,9 @@ import SlideTwentySeven from '../slides/27';
 import SlideTwentyEight from '../slides/28';
 import SlideTwentyNine from '../slides/29';
 import SlideThirty from '../slides/30';
+import SlideThirtyOne from '../slides/31';
+import SlideThirtyTwo from '../slides/32';
+import SlideThirtyThree from '../slides/33';
 
 // Require CSS
 require('normalize.css');
@@ -89,6 +92,9 @@ export default class Presentation extends React.Component {
         <SlideTwentyEight />
         <SlideTwentyNine />
         <SlideThirty />
+        <SlideThirtyOne />
+        <SlideThirtyTwo />
+        <SlideThirtyThree />
       </Deck>
     );
   }

@@ -2,33 +2,35 @@ import React from 'react';
 import { ModSlide, Header, CodeMod, WhiteCodePane, CodePaneWrapper } from './Base';
 
 export default () => (
-  <ModSlide bgColor="primary" padding="0px">
-    <Header>set & map</Header>
+  <ModSlide bgColor="primary" padding="0px" overflow>
+    <Header>classes</Header>
     <ul>
+      <li>syntactical sugar over JS's prototypical inheritance</li>
+      <li>classes are functions! are not hoisted like functions</li>
       <li>
-        a <strong>Set</strong> is like an array, but with all unique values
+        defined as <strong>class declaration</strong> or <strong>class expression</strong>
       </li>
       <li>
-        <CodeMod>new Set([iterable])</CodeMod> function to create a set
+        special <CodeMod>constructor</CodeMod> method to create and initialize
       </li>
       <li>
-        the <strong>Map</strong> object holds key-value pairs and remembers the original insertion order of the keys
+        inherit from a parent class with <CodeMod>extends</CodeMod> and <CodeMod>super()</CodeMod>
       </li>
-      <li>
-        <CodeMod>new Map([iterable])</CodeMod> function to create a map
-      </li>
-      <li>
-        unrelated to the <CodeMod>Array.map()</CodeMod> array method
-      </li>
-      <li>
-        also <CodeMod>WeakSet</CodeMod> and <CodeMod>WeakMap</CodeMod> objects, I dunno the difference (anyone?)
-      </li>
+      <li>big topic - materials for several talks. check out static members, getters, setters</li>
     </ul>
-    <WhiteCodePane
-      lang="javascript"
-      source={require('raw-loader!../code/25/set-map-es6.example')}
-      fontSize="18px"
-      spanPadding="5%"
-    />
+    <CodePaneWrapper column>
+      <WhiteCodePane
+        lang="javascript"
+        source={require('raw-loader!../code/22/class-es6.example')}
+        fontSize="18px"
+        spanPadding="5%"
+      />
+      <WhiteCodePane
+        lang="javascript"
+        source={require('raw-loader!../code/22/class-es5.example')}
+        fontSize="18px"
+        spanPadding="5%"
+      />
+    </CodePaneWrapper>
   </ModSlide>
 );

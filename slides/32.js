@@ -2,41 +2,28 @@ import React from 'react';
 import { ModSlide, Header, CodeMod, WhiteCodePane, CodePaneWrapper } from './Base';
 
 export default () => (
-  <ModSlide bgColor="primary" padding="0px" overflow>
-    <Header>generator functions</Header>
+  <ModSlide bgColor="primary" padding="0px">
+    <Header>ES.Next</Header>
     <ul>
-      <li>a function that can be "paused" to return something, then resumed</li>
       <li>
-        declared with * - <CodeMod>function* myGenerator(){}</CodeMod> or
-        <br />
-        <CodeMod>function *myGenerator(){}</CodeMod>
+        dynamic <CodeMod>import()</CodeMod> - import a module on demand (really cool!!) -{' '}
+        <CodeMod>React.lazy()</CodeMod> may use this?
+      </li>
+      <li>optional chaining - check if an object exists before trying to access its properties (very useful!!)</li>
+      <li>
+        temporal - standard objects and functions for working with dates and times (no more moment.js or date-fns?
+        maybe)
       </li>
       <li>
-        <CodeMod>yield</CodeMod> keyword returns a value plus if the function is finished
+        decorators - function that wraps another function <CodeMod>@name</CodeMod> - used in Angular 2+ (available in
+        TypeScript)
       </li>
       <li>
-        <CodeMod>.next()</CodeMod> method resumes the function
+        <CodeMod>Array.flatMap()</CodeMod> - map an array and flatten into a new array of depth 1
       </li>
       <li>
-        indicate final return value with normal <CodeMod>return</CodeMod>
-      </li>
-      <li>
-        <CodeMod>async/await</CodeMod> uses generators under the hood
+        <CodeMod>BigInt</CodeMod> - represent numbers larger than 2^53
       </li>
     </ul>
-    <CodePaneWrapper column>
-      <WhiteCodePane
-        lang="javascript"
-        source={require('raw-loader!../code/24/generator-es6.example')}
-        fontSize="18px"
-        spanPadding="5%"
-      />
-      <WhiteCodePane
-        lang="javascript"
-        source={require('raw-loader!../code/24/generator-es5.example')}
-        fontSize="18px"
-        spanPadding="5%"
-      />
-    </CodePaneWrapper>
   </ModSlide>
 );

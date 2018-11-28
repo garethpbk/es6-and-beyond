@@ -1,0 +1,29 @@
+// simple async function
+async function doBark() {
+  const noise = "Bark bark!";
+  return noise;
+}
+
+const aBark = doBark();
+console.log(aBark); // a promise object
+const theBark = doBark().then(res => console.log(res)); // Bark bark!
+
+// hitting a remote API with async/await
+const fetchLuke = async () => {
+  const hero = await fetch('https://swapi.co/api/people/1/?format=json');
+  
+  const heroData = hero.json();
+    
+  return heroData;
+}
+
+const writeHero = hero => {
+  const { name, hair_color, height } = hero;
+  return `Our hero is ${name}; they have ${hair_color} hair and are ${height}cm tall.`;
+}
+
+// remember that async functions return a promise
+const luke = fetchLuke().then(data => {
+  const ourHero = writeHero(data);
+  console.log(ourHero); // Our hero is Luke Skywalker; they have blonde hair are are 172cm tall.
+});

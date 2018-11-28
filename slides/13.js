@@ -12,6 +12,7 @@ export default () => (
       <li>many uses: pass array as arguments, copy an array or object, concatenate arrays (and other array methods)</li>
       <li>when used on a string, returns an array of string's characters</li>
       <li>only copies oobjects one level of nesting deep</li>
+      <li>array spread in ES6, object spread introduced in ES9/ES2018</li>
       <li>
         <em>
           <strong>spread</strong> all values an iterable into a function or method
